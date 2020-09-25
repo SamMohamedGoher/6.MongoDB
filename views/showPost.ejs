@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/showPost.css" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <div id="btop">
+      <p></p>
+    </div>
+    <div id="top">
+      <a href="/showGenre/<%= post.genreId._id %>"><h1><- <%= post.genreId.name %></h1></a>
+    </div>
+    <div id="right">
+      <p>left thing</p>
+      <p>another left thing</p>
+    </div>
+
+    <div id="a1">
+      <p></p>
+    </div>
+
+    <div id="a2">
+      <p></p>
+    </div>
+
+    <div id="cancleButton">
+      <a href="/editPost/<%= post._id %>">
+        <img src="../images/edit.png" width="50" height="50">
+      </a>
+    </div>
+
+    <div id="okButton">
+      <form action="/showPost/<%= post._id %>" method="post">
+        <input type="hidden" name="id" value="<%= post._id %>">
+        <input type="image" src="../images/delete.png" alt="submit" width="50" height="50">
+      </form>
+    </div>
+
+    <div id="sh">
+      <h1><%= post.title %></h1>
+      <i><%= post.date %></i>
+      <h3><%= post.description %></h3>
+    </div>
+
+  </body>
+</html>

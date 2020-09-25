@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <title>Genres</title>
+  </head>
+  <body>
+    <div id="btop">
+      <p></p>
+    </div>
+    <div id="top">
+      <h1>Genres</h1>
+    </div>
+    <div id="right">
+      <p>left thing</p>
+      <p>another left thing</p>
+    </div>
+
+    <div id="a1">
+      <p></p>
+    </div>
+
+    <div id="a2">
+      <p></p>
+    </div>
+
+    <div id="addButton">
+      <a href="/addGenre">
+        <img src="../images/addButton.png" width="75" height="75">
+      </a>
+    </div>
+    <% if(!genres[0]){ %>
+      <h2><i>there's no Genres yet.</i></h2>
+    <% }else {%>
+      <% for(let i =0,k = 1;i<genres.length ; i++, k++) {%>
+        <div id="post">
+          <div id="l">
+            <a href="/showGenre/<%= genres[i]._id %>">
+              <h3><%= genres[i].name %></h3>
+              <img src="<%= genres[i].imageUrl %>" width="150" height="80">
+            </a>
+          </div>
+          <div id="edit">
+            <a href="/editGenre/<%= genres[i]._id %>"><img src="../images/edit.png" width="30" height="30"></a>
+          </div>
+          <div id="delete">
+            <form action="/" method="post">
+              <input type="hidden" name="id" value="<%= genres[i]._id %>">
+              <input type="image" src="../images/delete.png" alt="submit" width="30" height="30">
+            </form>
+          </div>
+        </div>
+        <div id="after">
+          <p></p>
+        </div>
+          <% if(k % 5 === 0) {%>
+            <div id="after2">
+              <p></p>
+            </div>
+          <% } %>
+      <% } %>
+    <% } %>
+  </body>
+</html>

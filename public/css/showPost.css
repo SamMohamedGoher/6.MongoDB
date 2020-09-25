@@ -1,0 +1,66 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#btop{
+  width: 5%;
+  height: 75px;
+  background-color: rgb(199, 199, 199);
+  float: left;
+}
+
+#top{
+  width: 95%;
+  height: 75px;
+  background-color: rgb(199, 199, 199);
+  float: left;
+  text-align: left;
+}
+
+#top :link{
+  color: rgb(99, 9, 9);
+  transition: 1000ms;
+  text-decoration: none;
+}
+
+#top :hover{
+  color: rgb(58, 146, 87);
+}
+
+#top :visited{
+  color: rgb(0, 0, 0);
+}
+
+#right{
+  width: 15%;
+  height: 600px;
+  background-color: rgb(214, 214, 214);
+  float: left;
+  text-align: center;
+  font-size: x-large;
+}
+
+#okButton{
+  position: fixed;
+  left: 93%;
+  top: 87%;
+}
+
+#cancleButton{
+  position: fixed;
+  left: 87%;
+  top: 87%;
+}
+
+#a1{
+  width: 85%;
+  height: 70px;
+  float: left;
+}
+
+#a2{
+  width: 200px;
+  height: 530px;
+  float: left;
+}
+

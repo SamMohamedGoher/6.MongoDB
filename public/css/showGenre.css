@@ -1,0 +1,112 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#btop{
+  width: 5%;
+  height: 75px;
+  background-color: rgb(199, 199, 199);
+  float: left;
+}
+
+#top{
+  width: 95%;
+  height: 75px;
+  background-color: rgb(199, 199, 199);
+  float: left;
+  text-align: left;
+}
+
+#top :link{
+  color: rgb(99, 9, 9);
+  transition: 1000ms;
+  text-decoration: none;
+}
+
+#top :hover{
+  color: rgb(58, 146, 87);
+}
+
+#top :visited{
+  color: rgb(0, 0, 0);
+}
+
+#right{
+  width: 15%;
+  height: 600px;
+  background-color: rgb(214, 214, 214);
+  float: left;
+  text-align: center;
+  font-size: x-large;
+}
+
+#addButton{
+  position: fixed;
+  left: 93%;
+  top: 87%;
+}
+
+#post{
+  width: 200px;
+  height: 101px;
+  float: left;
+  text-align: center;
+  font-size: large;
+  border-radius: 10px;
+  border: 1px solid rgb(201, 39, 152);
+}
+
+#edit{
+  width: 98px;
+  height: 32px;
+  float: left;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgb(201, 39, 152);
+}
+
+#delete{
+  width: 98px;
+  height: 32px;
+  float: left;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgb(201, 39, 152);
+}
+
+#l :link{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 190ms;
+}
+#l :hover{
+  color: rgb(133, 126, 41);
+}
+
+#l :visited{
+  color: rgb(0, 0, 0);
+}
+
+#a1{
+  width: 85%;
+  height: 20px;
+  float: left;
+}
+
+#a2{
+  width: 20px;
+  height: 580px;
+  float: left;
+}
+
+#after{
+  width: 51px;
+  height: 141px;
+  float: left;
+}
+
+#after2{
+  width: 80%;
+  height: 30px;
+  float: left;
+}

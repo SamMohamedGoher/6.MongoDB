@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/editPost.css" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <div id="btop">
+      <p></p>
+    </div>
+    <div id="top">
+      <a href="/showGenre/<%= genre._id %>"><h1><- <%= genre.name %></h1></a>
+    </div>
+    <div id="right">
+      <p>left thing</p>
+      <p>another left thing</p>
+    </div>
+
+    <div id="a1">
+      <p></p>
+    </div>
+
+    <div id="a2">
+      <p></p>
+    </div>
+
+    
+
+    <div id="cancleButton">
+      <a href="/showPost/<%= post._id %>">
+        <img src="../images/cancleButton.png" width="75" height="75">
+      </a>
+    </div>
+
+    <div id="add">
+      <form action="/editPost/<%= post._id %>" method="post">
+        <h3>title</h3>
+        <input type="text" name="title" value="<%= post.title %>" size="17">
+        <h3>description</h3>
+        <input type="text" value="<%= post.description %>" name="description">
+        <div id="okButton">
+          <input type="image" src="../images/okButton.png" alt="submit" width="75" height="75">
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
