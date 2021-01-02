@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require(`dotenv`);
 const morgan = require(`morgan`);
 const bodyParser = require(`body-parser`);
-const {connectDB, Post} = require(`./models/posts`);
+const { connectDB } = require(`./models/posts`);
 const addPost = require(`./routes/addPost`);
 const showPost = require(`./routes/showPost`);
 const editPost = require(`./routes/editPost`);
@@ -11,6 +11,7 @@ const home = require(`./routes/home`);
 const addGenre = require(`./routes/addGenre`);
 const showGenre = require(`./routes/showGenre`);
 const editGenre = require(`./routes/editGenre`);
+const { errorHandler } = require(`./middleware/error`);
 
 // using dotenv
 dotenv.config({path: `./config/config.env`});
@@ -28,6 +29,10 @@ app.use(express.static(`public`));
 if(process.env.NODE_ENV === `development`)
   app.use(morgan(`dev`));
 
+
+// serving json requests
+app.use(express.json());
+
 // using bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -43,6 +48,9 @@ app.use(home);
 app.use(addGenre);
 app.use(showGenre);
 app.use(editGenre);
+
+// handling errors
+app.use(errorHandler);
 
 // listening to server
 app.listen(PORT, 

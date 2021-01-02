@@ -19,11 +19,11 @@ const connectDB = async () => {
 const postSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: [true, `please add a title`]
   },
   description: {
     type: String,
-    required: true
+    required: [true, `please add a description`]
   },
   date: {
     type: Date,
@@ -32,7 +32,7 @@ const postSchema = new mongoose.Schema({
   genreId:{
     type: mongoose.Schema.Types.ObjectId,
     ref: `genres`,
-    required: true
+    required: [true, `please add an if of genre`]
   }
 });
 
